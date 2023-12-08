@@ -18,7 +18,7 @@ public class Test1 {
 //			System.out.println(e.getMessage());
 //		}
 
-//		// test2: testing behavior without the try catch block
+		// test2: testing behavior without the try catch block
 //		Scanner radiusInput = new Scanner(System.in);
 //		double radius;
 //		System.out.println("Input your radius, then press Enter.");
@@ -26,7 +26,7 @@ public class Test1 {
 //		Circle circleFour = new Circle(radius);
 //		System.out.println(circleFour.toString());
 
-		// test3: testing behavior with try catch block
+//		 test3: testing behavior with try catch block
 		Scanner radiusInput = new Scanner(System.in);
 		double radius;
 
@@ -37,6 +37,8 @@ public class Test1 {
 			System.out.println(circleFour.toString());
 		} catch (InvalidSizeException e) {
 			System.out.println(e.getMessage());
+			Circle circleFour = new Circle(1);
+			System.out.println(circleFour.toString());
 
 		} finally {
 			radiusInput.close();

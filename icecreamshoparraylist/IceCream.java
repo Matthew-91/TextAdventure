@@ -15,7 +15,6 @@ public class IceCream {
 	}
 	public IceCream(String flavor) {
 		this.flavor = flavor;
-		this.price = 1;
 	}
 
 	public String getFlavor() {
@@ -36,7 +35,7 @@ public class IceCream {
 	
 	@Override
 	public String toString() {
-		return "This is " + flavor + " icecream, which costs " + String.format("$%.2f", price) + ".";
+		return flavor + " icecream, which costs " + String.format("$%.2f", price);
 	}
 
 	@Override

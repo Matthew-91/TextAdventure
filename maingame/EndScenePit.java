@@ -12,7 +12,7 @@ public class EndScenePit extends OpeningScene {
 
 	public void sceneExitAction(BaseCharacter playerOne) {
 		//quick win - reactive this line for a key
-//		playerOne.addItem("Key");
+		playerOne.addItem("Key");
 		switch (playerOne.playerChoice) {
 		case "A": {
 			// stuff

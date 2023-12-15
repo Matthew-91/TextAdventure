@@ -13,7 +13,7 @@ public class EndSceneGreenhouse extends OpeningScene {
 
 	public void sceneExitAction(BaseCharacter playerOne) {
 		//quick win - reactive code below
-//		playerOne.setHitpoints(12);
+		playerOne.setHitpoints(12);
 		switch (playerOne.playerChoice) {
 		case "A": {
 			// stuff

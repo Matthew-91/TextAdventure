@@ -29,8 +29,7 @@ public class BaseGame {
 		Collections.shuffle(possibleEnds);
 	}
 
-	public void gameRunner() {
-		Scanner inputPlayerChoice = new Scanner(System.in);
+	public void gameRunner(Scanner inputPlayerChoice) {
 		greetGamer();
 		pickYourCharacter(playerOne, inputPlayerChoice);
 
@@ -42,13 +41,29 @@ public class BaseGame {
 		} while (!playerOne.playerLost && !playerOne.playerWon);
 
 		System.out.println("The End.");
-		inputPlayerChoice.close();
+
+	}
+
+	public boolean replayForWinners(Scanner inputPlayerChoice) {
+		boolean flag = false;
+		
+		if (playerOne.playerWon) {
+			System.out.println("Would you like to play again?\n Select 'A' to play again or 'B' to quit.");
+			playerOne.playerChoice = currentScene.validLetterChecker(inputPlayerChoice).toUpperCase();
+
+			if (playerOne.playerChoice.equals("A")) {
+				flag = true;
+			} else {
+				flag = false;
+			}
+		}
+		return flag;
 	}
 
 	public void greetGamer() {
 		System.out.println("Welcome to Andreville.\n");
 	}
-	
+
 	public OpeningScene getNextScene() {
 		OpeningScene nextScene = new OpeningScene();
 		;

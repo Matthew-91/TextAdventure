@@ -11,6 +11,8 @@ public class EndScenePit extends OpeningScene {
 	}
 
 	public void sceneExitAction(BaseCharacter playerOne) {
+		//quick win - reactive this line for a key
+//		playerOne.addItem("Key");
 		switch (playerOne.playerChoice) {
 		case "A": {
 			// stuff
@@ -19,23 +21,22 @@ public class EndScenePit extends OpeningScene {
 						+ " to unlock the door and escape.");
 				playerOne.playerWon = true;
 			} else if (playerOne.inventory.contains("Pattern")) {
-				System.out.println(
-						"There's a keypad next to the door's handle! Intuitively, you punch in the "
+				System.out.println("There's a keypad next to the door's handle! Intuitively, you punch in the "
 						+ "pattern you found earlier and escape safely.");
 				playerOne.playerWon = true;
 			} else {
 				System.out.println("You fight with the door as the beast crashes toward you. "
-						+ "You have no way to unlock it. Before you can turn around, everything goes "
-						+ "dark.");
+						+ "You have no way to unlock it. Before you can turn around, everything goes " + "dark.");
 				playerOne.playerLost = true;
 			}
-		}break;
+		}
+			break;
 		case "B": {
 			// stuff
-			System.out.println(
-					"The last thing you feel cannot be described. And now you're not alive to do so.");
+			System.out.println("The last thing you feel cannot be described. And now you're not alive to do so.");
 			playerOne.playerLost = true;
-		}break;
+		}
+			break;
 		default: {
 			// stuff
 			if (playerOne.inventory.contains("Key")) {
@@ -43,17 +44,16 @@ public class EndScenePit extends OpeningScene {
 						+ " to unlock the door and escape.");
 				playerOne.playerWon = true;
 			} else if (playerOne.inventory.contains("Pattern")) {
-				System.out.println(
-						"There's a keypad next to the door's handle! Intuitively, you punch in the "
+				System.out.println("There's a keypad next to the door's handle! Intuitively, you punch in the "
 						+ "pattern you found earlier and escape safely.");
 				playerOne.playerWon = true;
 			} else {
 				System.out.println("You fight with the door as the beast crashes toward you. "
-						+ "You have no way to unlock it. Before you can turn around, everything goes "
-						+ "dark.");
+						+ "You have no way to unlock it. Before you can turn around, everything goes " + "dark.");
 				playerOne.playerLost = true;
 			}
-			}break;
+		}
+			break;
 		}
 	}
 }

@@ -7,7 +7,6 @@ public abstract class BaseScene {
 	protected String title;
 	protected String description;
 	protected String[] eventOptions;
-//	protected String playerChoice;
 
 	public int getSceneId() {
 		return sceneId;
@@ -25,35 +24,18 @@ public abstract class BaseScene {
 		this.title = title;
 	}
 
-//	public String getPlayerChoice() {
-//		return playerChoice;
-//	}
-//
-//	public void setPlayerChoice(String playerChoice) {
-//		this.playerChoice = playerChoice;
-//	}
-
 	public void sceneStartAction() {
-//		Scanner inputPlayerChoice = new Scanner(System.in);
-
 		System.out.println(description);
 
 		for (String option : this.eventOptions) {
 			System.out.println(option);
 		}
-
-//		String choiceContainer = this.validLetterChecker(inputPlayerChoice.nextLine());
-//		this.playerChoice = validLetterChecker().toUpperCase();
-
-//		inputPlayerChoice.close();
 	}
 
 	public String validLetterChecker(Scanner inputPlayerChoice) {
-		
-		
 		boolean flag = true;
 		String choiceContainer = "";
-		
+
 		if (this.sceneId == 5) {
 			while (flag) {
 				choiceContainer = inputPlayerChoice.nextLine();
@@ -75,8 +57,7 @@ public abstract class BaseScene {
 				}
 			}
 		}
-		
-		
+
 		return choiceContainer;
 	}
 }

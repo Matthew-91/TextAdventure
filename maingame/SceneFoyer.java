@@ -28,22 +28,22 @@ public class SceneFoyer extends OpeningScene {
 				playerOne.decreaseHp(4);
 				System.out.println("You move on.");
 			}
-//			return playerOne.getNextScene();
-		}break;
+		}
+			break;
 		case "B": {
 			// stuff
 			System.out.println(
 					"You open the front door, but something you can't make out throws you back into the foyer. You bolt up from the floor and run into the nearest room.");
 			playerOne.decreaseHp(4);
-//			return playerOne.getNextScene();
-		}break;
+		}
+			break;
 		default: {
 			// stuff
 			System.out.println(
 					"You open the front door, but something you can't make out throws you back into the foyer. You bolt up from the floor and run into the nearest room.");
 			playerOne.decreaseHp(4);
-//			return playerOne.getNextScene();
-			}break;
+		}
+			break;
 		}
 	}
 }

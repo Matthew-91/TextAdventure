@@ -12,39 +12,45 @@ public class EndSceneGreenhouse extends OpeningScene {
 	}
 
 	public void sceneExitAction(BaseCharacter playerOne) {
+		//quick win - reactive code below
+//		playerOne.setHitpoints(12);
 		switch (playerOne.playerChoice) {
 		case "A": {
 			// stuff
-			if (playerOne.hitPoints>10) {
+			if (playerOne.hitPoints > 10) {
 				System.out.println("You round the corner and see an exit just a little further away. "
 						+ "You make it outside and get sick, but at least you're alive.");
 				playerOne.playerWon = true;
-			}else {
+			} else {
 				System.out.println("You choke to death before you make it to the corner.");
 				playerOne.playerLost = true;
 			}
-		}break;
+		}
+			break;
 		case "B": {
 			// stuff
-			if (playerOne.strength>10) {
+			if (playerOne.strength > 10) {
 				System.out.println("You have to hit the glass multiple times, but it does shatter. You escape.");
 				playerOne.playerWon = true;
-			}else {
-				System.out.println("You pound helplessly at the glass. Your blows begin to get weaker. Everything goes black.");
+			} else {
+				System.out.println(
+						"You pound helplessly at the glass. Your blows begin to get weaker. Everything goes black.");
 				playerOne.playerLost = true;
 			}
-		}break;
+		}
+			break;
 		default: {
 			// stuff
-			if (playerOne.hitPoints>10) {
+			if (playerOne.hitPoints > 10) {
 				System.out.println("You round the corner and see an exit just a little further away. "
 						+ "You make it outside and get sick, but at least you're alive.");
 				playerOne.playerWon = true;
-			}else {
+			} else {
 				System.out.println("You choke to death before you make it to the corner.");
 				playerOne.playerLost = true;
 			}
-			}break;
+		}
+			break;
 		}
 	}
 }

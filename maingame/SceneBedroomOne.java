@@ -22,8 +22,8 @@ public class SceneBedroomOne extends OpeningScene {
 				playerOne.decreaseHp(2);
 				System.out.println("You move on.");
 			}
-//			return playerOne.getNextScene();
-		}break;
+		}
+			break;
 		case "B": {
 			// stuff
 			if (playerOne.getStrength() > 8) {
@@ -35,8 +35,8 @@ public class SceneBedroomOne extends OpeningScene {
 				playerOne.decreaseHp(1);
 				System.out.println("You move on.");
 			}
-//			return playerOne.getNextScene();
-		}break;
+		}
+			break;
 		default: {
 			// stuff
 			if (playerOne.getStrength() > 8) {
@@ -48,8 +48,8 @@ public class SceneBedroomOne extends OpeningScene {
 				playerOne.decreaseHp(1);
 				System.out.println("You move on.");
 			}
-//			return playerOne.getNextScene();
-			}break;
+		}
+			break;
 		}
 	}
 }

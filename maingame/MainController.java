@@ -2,9 +2,11 @@ package com.skillstorm.maingame;
 
 import java.util.Scanner;
 
-public class Main {
+public class MainController {
 
 	public static void main(String[] args) {
+		
+		//TODO refactor to remove scanner handling from Main
 		Scanner inputPlayerChoice = new Scanner(System.in);
 		boolean replay = false;
 		do {

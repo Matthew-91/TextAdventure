@@ -9,7 +9,7 @@ public class PlaylistManager<T> {
 	
 	public PlaylistManager() {
 		this.playlist = new LinkedList<T>();
-		this.songSelector = playlist.listIterator();
+//		this.songSelector = playlist.listIterator();
 	}
 	
 	public void addSong(T songName) {
@@ -21,9 +21,16 @@ public class PlaylistManager<T> {
 	
 	public void playSong() {
 		if(!playlist.isEmpty()) {
-			System.out.println("Playing " + songSelector.next());
-			songSelector.previous();
+			this.songSelector = playlist.listIterator();
+			System.out.println("Playing \"" + songSelector.next() + "\".");
+//			songSelector.next();
+//			System.out.println(playlist.listIterator().next());;
+//			playlist.listIterator().next();
+//			System.out.println(playlist.listIterator().next());;
+//			System.out.println(this.songSelector.next());
+			
 		}
+//		this.songSelector = playlist.listIterator();
 	}
 	
 	public void displayPlaylist() {

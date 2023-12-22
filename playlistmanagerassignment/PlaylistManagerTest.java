@@ -9,7 +9,7 @@ public class PlaylistManagerTest {
 		pM.addSong("That Song");
 		pM.addSong("A Song");
 		
-//		pM.playSong();
+		pM.playSong();
 		
 		pM.displayPlaylist();
 

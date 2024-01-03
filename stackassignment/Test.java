@@ -13,7 +13,7 @@ public class Test {
 		
 		// Part 2
 		CheckParenthesesWithStack parentheses = new CheckParenthesesWithStack();
-		String testExpression = "(())";
+		String testExpression = "()()";
 		
 		// I don't see how to solve this use case with a Stack in a way that makes the Stack worth using
 		String testExpression2 = "))((";

@@ -14,7 +14,9 @@ public class Test {
 		// Part 2
 		CheckParenthesesWithStack parentheses = new CheckParenthesesWithStack();
 		String testExpression = "(())";
-		String testExpression2 = "(())))))";
+		
+		// I don't see how to solve this use case with a Stack in a way that makes the Stack worth using
+		String testExpression2 = "))((";
 		
 		System.out.println(parentheses.isBalanced(testExpression));
 		System.out.println(parentheses.isBalanced(testExpression2));

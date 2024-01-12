@@ -9,10 +9,11 @@ public class LetterCounter {
 		
 		System.out.println("First Sentence: " + countLetters(sentence1));
 		System.out.println("Second Sentence: " + countLetters(sentence2));
+		
 	}
 	
 	public static HashMap<Character, Integer> countLetters(String str) {
-	    
+	    // str.split(\\s) is another good string and regex combination
 		HashMap<Character, Integer> letterCounter = new HashMap<>();
 	    for(Character c : str.replaceAll("\\p{P}|\\s|\\d", "").toLowerCase().toCharArray()) {
 	    	if(letterCounter.containsKey(c)) {
